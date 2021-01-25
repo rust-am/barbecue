@@ -7,10 +7,13 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 
 gem 'devise'
+gem 'devise-i18n'
+gem 'rails-i18n'
 
 gem 'rails_12factor'
 
 gem 'uglifier'
+
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'

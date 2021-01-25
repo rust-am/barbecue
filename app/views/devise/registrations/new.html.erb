@@ -11,7 +11,7 @@
         <div class="field">
           <%= f.label :password %>
           <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <em>(<%= t('app.field.password_length', count: @minimum_password_length) %>)</em>
           <% end %><br/>
           <%= f.password_field :password, autocomplete: "new-password", class: "form-control buffer-bottom" %>
         </div>
@@ -22,11 +22,10 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "Sign up", class: "btn btn-primary" %>
+          <%= f.submit t('app.button.sing_up'), class: "btn btn-primary" %>
           <%= render "devise/shared/links" %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
-

@@ -15,39 +15,35 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to "Barbeque", root_path, class: 'navbar-brand' %>
+  <%= link_to t('app.company'), root_path, class: 'navbar-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
       <% if user_signed_in? %>
-        <a class="nav-link" <%= link_to 'Профиль', current_user %></a>
-          <a class="nav-link" <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></a>
+        <a class="nav-link" <%= link_to t('app.nav_bar.profile'), current_user %></a>
+          <a class="nav-link" <%= link_to t('app.nav_bar.log_out'), destroy_user_session_path, :method => :delete %></a>
       <% else %>
-        <a class="nav-link" <%= link_to 'Войти', new_user_session_path %></a>
-        <a class="nav-link" <%= link_to 'Зарегистрироваться', new_user_registration_path %></a>
+        <a class="nav-link" <%= link_to t('app.nav_bar.log_in'), new_user_session_path %></a>
+        <a class="nav-link" <%= link_to t('app.nav_bar.sing_up'), new_user_registration_path %></a>
       <% end %>
     </ul>
   </div>
-<!--      <a class="nav-link" href="#"><%#= link_to "Exit", destroy_user_session_path, method: :delete %></a>-->
-
 </nav>
 
 <div class="container">
   <div class="row">
     <div class="col-lg-9 buffer-top">
-      <%#= bootstrap_flash %>
+      <%= bootstrap_flash %>
       <%= yield %>
     </div>
   </div><!--/row-->
 </div> <!-- /container -->
 
   <footer>
-    <p>&copy; Barbecue 2020</p>
+    <p>&copy; <%= t('app.company') %> | <%= t('app.developer') %> | <%= DateTime.now.year %></p>
   </footer>
-
-
 
 </body>
 </html>

@@ -30,4 +30,37 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  controllers:
+    events:
+      created: 'Event was successfully created.'
+      updated: 'Event was successfully updated.'
+      destroyed: 'Event was successfully destroyed.'
+    users:
+      updated: 'Profile was successfully updated.'
+
+  app:
+    name: 'Barbeque'
+    company: 'Good programmer'
+    developer: 'Rustam Shaidullov'
+
+
+    nav_bar:
+      log_in: 'Log in'
+      sing_up: 'Sing up'
+      profile: 'Profile'
+      log_out: 'Log out'
+
+    event:
+      head: 'Events'
+      create: 'Create Event'
+      new: 'New event'
+      edit: 'Edit event'
+
+    button:
+      save: 'Save'
+      edit: 'Edit'
+      back: 'back'
+      change_password: 'Change password'
+      edit_profile: 'Edit profile'
+
+    no_events: 'User has not organized any events'
