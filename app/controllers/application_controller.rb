@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   # Хелпер метод, доступный во вьюхах
   helper_method :current_user_can_edit?
+  helper_method :have_a_subscriptions?
 
   # Настройка для девайза — разрешаем обновлять профиль, но обрезаем
   # параметры, связанные со сменой пароля.
