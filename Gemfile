@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'carrierwave'
 gem 'rmagick'
 
+gem 'fog-aws'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
