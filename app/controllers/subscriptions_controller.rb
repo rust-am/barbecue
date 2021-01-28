@@ -35,10 +35,6 @@ class SubscriptionsController < ApplicationController
     @subscription = @event.subscriptions.find(params[:id])
   end
 
-  # def self_subscription_check
-  #   message = { notice: I18n.t('controllers.subscriptions.error') }
-  # end
-
   def subscription_params
     params.fetch(:subscription, {}).permit(:user_email, :user_name)
   end

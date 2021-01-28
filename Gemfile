@@ -14,6 +14,8 @@ gem 'rails_12factor'
 
 gem 'uglifier'
 
+gem 'carrierwave'
+gem 'rmagick'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
