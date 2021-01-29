@@ -19,6 +19,9 @@ gem 'rmagick'
 
 gem 'fog-aws'
 
+gem "mailjet"
+gem "dotenv-rails"
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
