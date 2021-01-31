@@ -30,7 +30,7 @@ class Subscription < ApplicationRecord
 
   def self_event_subscription
     if user == event.user
-      errors.add(:subscription, 'На свое событие подписываться нельзя, да и смысл :/')
+      errors.add(:subscription, I18n.t('app.field.subscription_error'))
     end
   end
 end
