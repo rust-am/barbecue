@@ -29,15 +29,19 @@ class Subscription < ApplicationRecord
     end
   end
 
+  private
+
+  # запрет подписки на свое событие
   def self_event_subscription
     if user == event.user
-      errors.add(:subscription, I18n.t('app.field.subscription_error'))
+      errors.add(:user_email, :self_subscription_prohibited)
     end
   end
 
+  # запрет использования зарегистрированной почты для подписки на эвент
   def registered_email_validation
-    if User.all.exists?(email: user_email)
-      errors.add(:subscription, I18n.t('app.field.email_error'))
+    if User.exists?(email: user_email)
+      errors.add(:user_email, :already_taken)
     end
   end
 end
