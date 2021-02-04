@@ -1,12 +1,13 @@
 ymaps.ready(init);
-var myMap;
+// var myMap;
 
 function init() {
   if (!document.getElementById('map')) return false;
 
   address =  document.getElementById('map').getAttribute('data-address');
 
-  myMap = new ymaps.Map("map", {
+  // ymaps.ready(init);
+  var myMap = new ymaps.Map("map", {
     center: [55.76, 37.64],
     zoom: 10
   });
@@ -26,7 +27,7 @@ function init() {
       );
 
       myMap.setCenter(coordinates);
-      myMap.setZoom(15);
+      myMap.setZoom(10);
     }, function (err) {
       alert('Ошибка при определении местоположения');
     }
