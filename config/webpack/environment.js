@@ -14,3 +14,12 @@ append(
 )
 
 module.exports = environment
+
+// module.exports = {
+//     plugins: [
+//   new webpack.NoErrorsPlugin({
+//     $: "jquery",
+//     jQuery: "jquery"
+//   })
+// ]
+// };

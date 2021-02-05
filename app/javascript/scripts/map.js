@@ -1,5 +1,5 @@
 ymaps.ready(init);
-// var myMap;
+var myMap;
 
 function init() {
   if (!document.getElementById('map')) return false;
@@ -7,9 +7,9 @@ function init() {
   address =  document.getElementById('map').getAttribute('data-address');
 
   // ymaps.ready(init);
-  var myMap = new ymaps.Map("map", {
+  myMap = new ymaps.Map("map", {
     center: [55.76, 37.64],
-    zoom: 10
+    zoom: 7
   });
 
   myGeocoder = ymaps.geocode(address);
@@ -27,7 +27,7 @@ function init() {
       );
 
       myMap.setCenter(coordinates);
-      myMap.setZoom(10);
+      myMap.setZoom(7);
     }, function (err) {
       alert('Ошибка при определении местоположения');
     }
