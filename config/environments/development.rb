@@ -36,6 +36,8 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  # config.action_mailer.perform_caching = false
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -70,5 +72,6 @@ Rails.application.configure do
   #   authentication: 'plain',
   #   enable_starttls_auto: true
   # }
-end
 
+  config.action_mailer.delivery_method = :letter_opener # do not use in dev mode!
+end
