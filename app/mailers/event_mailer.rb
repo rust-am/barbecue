@@ -19,6 +19,6 @@ class EventMailer < ApplicationMailer
     @event = event
     @photo = photo
 
-    mail to: event.user.email, subject: "Новая фотография @ #{event.title}"
+    mail to: event.user.email, subject: default_i18n_subject(title: event.title)
   end
 end
