@@ -77,26 +77,26 @@ ru:
 
   event_mailer:
     comment:
-      title: 'Новый комментарий'
+      title: "Новый комментарий: #{title}"
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата и время'
       owner: 'Организатор'
     subscription:
-      title: 'Новая подписка'
+      title: "Новая подписка на #{title}"
       name: 'Имя'
       email: 'Email'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата и время'
       owner: 'Организатор'
     photo:
-      title: 'Новое фото'
+      title: "Новое фото: #{title}"
       name: 'Имя'
       email: 'Email'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата и время'
       owner: 'Организатор'
 
   # Перевод названия приложения и компании-разработчика
