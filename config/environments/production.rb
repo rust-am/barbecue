@@ -96,8 +96,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
-    :user_name => ENV['MAILJET_API_KEY'],
-    :password => ENV['MAILJET_SECRET_KEY'],
+    :user_name => Rails.application.credentials.mailjet[:api_key],
+    :password => Rails.application.credentials.mailjet[:secret_key],
     :domain => 'heroku.com',
     :address => 'in-v3.mailjet.com',
     :port => 587,
