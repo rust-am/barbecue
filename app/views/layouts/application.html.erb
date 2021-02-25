@@ -8,8 +8,8 @@
   <!--font-awesome-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <!--lightbox-->
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>-->
-<!--  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">-->
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>-->
+  <!--  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">-->
   <!--yandex map-->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=<%= Rails.application.credentials.yandex[:map_api_key] %>&lang=ru_RU"
           type="text/javascript"></script>
@@ -25,20 +25,23 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to t('app.company'), root_path, class: 'navbar-brand' %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav">
-      <% if user_signed_in? %>
-        <a class="nav-link" <%= link_to t('app.nav_bar.profile'), current_user %></a>
+  <div class="container">
+
+    <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+          <a class="nav-link" <%= link_to t('app.nav_bar.profile'), current_user %></a>
           <a class="nav-link" <%= link_to t('app.nav_bar.log_out'), destroy_user_session_path, :method => :delete %></a>
-      <% else %>
-        <a class="nav-link" <%= link_to t('app.nav_bar.log_in'), new_user_session_path %></a>
-        <a class="nav-link" <%= link_to t('app.nav_bar.sing_up'), new_user_registration_path %></a>
-      <% end %>
-    </ul>
+        <% else %>
+          <a class="nav-link" <%= link_to t('app.nav_bar.log_in'), new_user_session_path %></a>
+          <a class="nav-link" <%= link_to t('app.nav_bar.sing_up'), new_user_registration_path %></a>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -49,11 +52,11 @@
       <%= yield %>
     </div>
   </div><!--/row-->
-</div> <!-- /container -->
 
   <footer>
-    <p>&copy; <%= t('app.company') %> | <%= t('app.developer') %> | <%= DateTime.now.year %></p>
+    <p class="text-center buffer-both">&copy; <%= t('app.company') %> | <%= t('app.developer') %>
+      | <%= DateTime.now.year %></p>
   </footer>
-
+</div> <!-- /container -->
 </body>
 </html>

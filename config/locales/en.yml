@@ -39,7 +39,7 @@ en:
       updated: 'Profile was successfully updated.'
 
   app:
-    name: 'Barbeque'
+    name: 'Barbeсue'
     company: 'Good programmer'
     developer: 'Rustam Shaidullov'
 
