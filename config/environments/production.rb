@@ -90,8 +90,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Setup the mailer config
-  config.action_mailer.default_url_options = { host: 'barbecue.ru.com'}
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { host: 'http://barbecue.ru.com'}
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
   # config.action_mailer.delivery_method = :mailjet_api
   #
