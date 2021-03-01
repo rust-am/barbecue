@@ -78,14 +78,14 @@ ru:
   event_mailer:
     comment:
       title: 'Новый комментарий'
-      subject: 'Новый комментарий: %{title}'
+      subject: 'New comment: %{title}' # что бы избежать блокировки на mailjet убрал кирилицу
       author: 'Автор'
       event: 'Событие'
       datetime: 'Дата и время'
       owner: 'Организатор'
     subscription:
       title: 'Новая подписка'
-      subject: 'Новая подписка на %{title}'
+      subject: 'New subscription for %{title}'  # что бы избежать блокировки на mailjet убрал кирилицу
       name: 'Имя'
       email: 'Email'
       author: 'Автор'
@@ -94,7 +94,7 @@ ru:
       owner: 'Организатор'
     photo:
       title: 'Новое фото'
-      subject: 'Новое фото: %{title}'
+      subject: 'New picture for event %{title}'  # что бы избежать блокировки на mailjet убрал кирилицу
       name: 'Имя'
       email: 'Email'
       author: 'Автор'
