@@ -93,8 +93,8 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { host: 'http://barbecue.ru.com'}
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
-  # config.action_mailer.delivery_method = :mailjet_api
-  #
+  config.action_mailer.delivery_method = :mailjet_api
+  
   # ActionMailer::Base.smtp_settings = {
   #   :user_name => Rails.application.credentials.dig(:mailjet, :api_key),
   #   :password => Rails.application.credentials.dig(mailjet, :secret_key),
