@@ -64,6 +64,12 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener'
+
+  gem 'capistrano', '~> 3.11.0'
+  gem 'capistrano-rails', '~> 1.3.0'
+  gem 'capistrano-passenger', '~> 0.2'
+  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-bundler', '~> 1.4.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
