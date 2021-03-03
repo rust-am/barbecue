@@ -9,6 +9,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'devise'
 gem 'devise-i18n'
 gem 'rails-i18n'
+gem 'pundit', '~> 2.1'
 
 gem 'rails_12factor'
 
