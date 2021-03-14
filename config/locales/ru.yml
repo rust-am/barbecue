@@ -30,7 +30,7 @@ ru:
         user_name: 'Имя пользователя'
         user_email: 'Email'
       photo:
-        photo: 'Фото'
+        photo: 'Фото:'
 
     # ошибки
     errors:
@@ -140,10 +140,11 @@ ru:
       edit_password: 'Изменить пароль'
       save: 'Сохранить'
       edit: 'Изменить'
-      back: 'вернуться'
+      back: 'Вернуться'
       change_password: 'Сменить пароль'
       change_my_password: 'Изменить мой пароль'
       edit_profile: 'Редактировать профиль'
+      send: 'Отправить'
 
     field:
       new_password: 'Новый пароль'
