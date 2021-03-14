@@ -81,10 +81,7 @@ secret_key_base: <token>
 mailjet:
   api_key: <token>
   secret_key: <token>
-  gmail_sender: <token>
-  mailru_sender: <token>
-  yandex_hi_sender: <token>
-  yandex_admin_sender: <token>
+  mail_sender: <token>
 
 pg:
   name: <token>
